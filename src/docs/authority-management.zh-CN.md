@@ -157,7 +157,7 @@ import { axios } from '@/utils/request'
 import { UserLayout, BasicLayout, RouteView, BlankLayout, PageView } from '@/layouts'
 
 
-// 前端路由表
+// 前端路由映射表
 const constantRouterComponents = {
   // 基础页面 layout 必须引入
   BasicLayout: BasicLayout,
@@ -196,7 +196,6 @@ export const getRouterByUser = () => {
  * 获取路由菜单信息
  *
  * 1. 调用 getRouterByUser() 访问后端接口获得路由结构数组
- *    @see https://github.com/sendya/ant-design-pro-vue/blob/feature/dynamic-menu/public/dynamic-menu.json
  * 2. 调用
  * @returns {Promise<any>}
  */
@@ -246,9 +245,8 @@ export const generator = (routerMap, parent) => {
   })
 }
 ```
-> 以上代码有实例可参考： https://github.com/sendya/ant-design-pro-vue/tree/feature/dynamic-menu
 
-> 另外还提供一套完整的动态路由构建方案, 下方提供的链接可参考并理解其作用(2.0.3版本中提供) 
+> 下方提供的链接可参考并理解其作用(2.0.3及以上版本中提供) 
 >
 > https://github.com/sendya/ant-design-pro-vue/blob/master/src/router/generator-routers.js
 > https://github.com/sendya/ant-design-pro-vue/blob/master/src/store/modules/async-router.js
